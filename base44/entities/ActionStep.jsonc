@@ -1,0 +1,89 @@
+{
+  "name": "ActionStep",
+  "type": "object",
+  "properties": {
+    "goal_id": {
+      "type": "string",
+      "description": "Reference to the quarter goal"
+    },
+    "title": {
+      "type": "string",
+      "description": "The action step title"
+    },
+    "description": {
+      "type": "string",
+      "description": "What this step involves"
+    },
+    "week_number": {
+      "type": "number",
+      "description": "Which week this step is scheduled for (1-13 per quarter)"
+    },
+    "estimated_hours": {
+      "type": "number",
+      "description": "Estimated hours to complete"
+    },
+    "available_hours_per_week": {
+      "type": "number",
+      "description": "Hours available per week for this work"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "strategy",
+        "content_creation",
+        "outreach",
+        "skill_building",
+        "mindset",
+        "health_wellness",
+        "visibility",
+        "other"
+      ],
+      "description": "Category of action"
+    },
+    "tool_type": {
+      "type": "string",
+      "enum": [
+        "somatic_healing",
+        "goal_setting",
+        "nlp",
+        "prayer_reflection",
+        "art_activity",
+        "shadow_work",
+        "healthy_lifestyle",
+        "action_step"
+      ],
+      "description": "Which coaching tool this step uses"
+    },
+    "step_status": {
+      "type": "string",
+      "enum": [
+        "not_started",
+        "in_progress",
+        "on_track",
+        "behind",
+        "complete"
+      ],
+      "default": "not_started",
+      "description": "Current progress status of this step"
+    },
+    "is_completed": {
+      "type": "boolean",
+      "default": false
+    },
+    "completed_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "order": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "goal_id",
+    "title"
+  ]
+}

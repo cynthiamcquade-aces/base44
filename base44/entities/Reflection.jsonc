@@ -1,0 +1,46 @@
+{
+  "name": "Reflection",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string",
+      "description": "The reflection entry"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "gratitude",
+        "breakthrough",
+        "fear_faced",
+        "lesson_learned",
+        "prayer",
+        "shadow_work",
+        "celebration"
+      ],
+      "description": "Type of reflection"
+    },
+    "mood": {
+      "type": "string",
+      "enum": [
+        "inspired",
+        "challenged",
+        "peaceful",
+        "courageous",
+        "grateful",
+        "uncertain",
+        "joyful"
+      ]
+    },
+    "prompt_used": {
+      "type": "string",
+      "description": "The prompt that inspired this reflection"
+    }
+  },
+  "required": [
+    "content",
+    "type"
+  ]
+}

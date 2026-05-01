@@ -1,0 +1,57 @@
+{
+  "name": "DailyCheckin",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "The date of this check-in"
+    },
+    "time_available": {
+      "type": "string",
+      "description": "How much time the user has today"
+    },
+    "goals_for_today": {
+      "type": "string",
+      "description": "What the user wants to accomplish in today's session"
+    },
+    "balance_rating": {
+      "type": "string",
+      "enum": [
+        "on_track",
+        "ahead",
+        "behind",
+        "crawled"
+      ],
+      "description": "A=on_track, B=ahead, C=behind, D=crawled"
+    },
+    "what_was_challenging": {
+      "type": "string",
+      "description": "What about today was challenging"
+    },
+    "what_was_rewarding": {
+      "type": "string",
+      "description": "What about today was rewarding"
+    },
+    "lesson_learned": {
+      "type": "string",
+      "description": "What did you learn today to archive for future stories?"
+    },
+    "minutes_on_goals": {
+      "type": "number",
+      "description": "Minutes spent on goal work"
+    },
+    "minutes_on_outreach": {
+      "type": "number",
+      "description": "Minutes spent on social media / outreach"
+    },
+    "minutes_on_toolkit": {
+      "type": "number",
+      "description": "Minutes spent on toolkit / life balance"
+    }
+  },
+  "required": [
+    "date",
+    "balance_rating"
+  ]
+}

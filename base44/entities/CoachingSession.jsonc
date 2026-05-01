@@ -1,0 +1,60 @@
+{
+  "name": "CoachingSession",
+  "type": "object",
+  "properties": {
+    "step_id": {
+      "type": "string",
+      "description": "The action step this session was triggered from (if any)"
+    },
+    "step_title": {
+      "type": "string",
+      "description": "Snapshot of the step title"
+    },
+    "goal_id": {
+      "type": "string",
+      "description": "The related goal ID"
+    },
+    "trigger": {
+      "type": "string",
+      "enum": [
+        "stuck_on_step",
+        "check_in_with_coach",
+        "dashboard"
+      ],
+      "description": "What triggered this session"
+    },
+    "messages": {
+      "type": "array",
+      "description": "Full conversation history [{role, content}]"
+    },
+    "root_insight": {
+      "type": "string",
+      "description": "The core insight or belief uncovered"
+    },
+    "suggested_tools": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tool IDs suggested at end of session"
+    },
+    "chosen_tools": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tools the user chose to add to their kit"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "completed"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "trigger"
+  ]
+}

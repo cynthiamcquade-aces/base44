@@ -1,0 +1,42 @@
+{
+  "name": "SpeechDraft",
+  "type": "object",
+  "properties": {
+    "label": {
+      "type": "string",
+      "description": "Name/title of this speech draft"
+    },
+    "draft": {
+      "type": "string",
+      "description": "The speech draft content"
+    },
+    "feedback": {
+      "type": "string",
+      "description": "Initial analysis/feedback from the coach"
+    },
+    "area_id": {
+      "type": "string",
+      "description": "ID of the selected coaching focus area"
+    },
+    "area_label": {
+      "type": "string",
+      "description": "Label of the selected coaching focus area"
+    },
+    "messages": {
+      "type": "array",
+      "description": "Coaching conversation history [{role, content}]"
+    },
+    "word_count": {
+      "type": "number",
+      "description": "Word count of the draft"
+    },
+    "last_saved": {
+      "type": "string",
+      "description": "Date/time the draft was last saved"
+    }
+  },
+  "required": [
+    "label",
+    "draft"
+  ]
+}

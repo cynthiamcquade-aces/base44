@@ -1,0 +1,34 @@
+{
+  "name": "Hook",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "A short name for this hook"
+    },
+    "content": {
+      "type": "string",
+      "description": "The actual hook text"
+    },
+    "style": {
+      "type": "string",
+      "enum": [
+        "emotional",
+        "bold_declaration",
+        "story_opening",
+        "question",
+        "stat",
+        "custom"
+      ],
+      "description": "Hook style/category"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Coaching notes or delivery tips for this hook"
+    }
+  },
+  "required": [
+    "title",
+    "content"
+  ]
+}

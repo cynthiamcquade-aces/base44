@@ -1,0 +1,22 @@
+{
+  "name": "ToolReflection",
+  "type": "object",
+  "properties": {
+    "tool_entry_id": {
+      "type": "string",
+      "description": "ID of the linked ToolboxEntry"
+    },
+    "tool_id": {
+      "type": "string",
+      "description": "ID of the tool/exercise"
+    },
+    "content": {
+      "type": "string",
+      "description": "The reflection note"
+    }
+  },
+  "required": [
+    "tool_id",
+    "content"
+  ]
+}

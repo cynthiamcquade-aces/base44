@@ -1,0 +1,36 @@
+{
+  "name": "BrainDumpNote",
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "string",
+      "description": "The brain dump note content"
+    },
+    "title": {
+      "type": "string",
+      "description": "Optional title"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "idea",
+        "added_to_goals",
+        "added_to_speech",
+        "done",
+        "discarded"
+      ],
+      "default": "idea",
+      "description": "What happened with this note"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Optional tags"
+    }
+  },
+  "required": [
+    "content"
+  ]
+}

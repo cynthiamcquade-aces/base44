@@ -1,0 +1,27 @@
+{
+  "name": "CustomTool",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "emoji": {
+      "type": "string",
+      "description": "An emoji icon for this tool"
+    },
+    "tagline": {
+      "type": "string",
+      "description": "A short description"
+    },
+    "exercises": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of exercises or practices"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

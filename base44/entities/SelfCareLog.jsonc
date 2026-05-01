@@ -1,0 +1,46 @@
+{
+  "name": "SelfCareLog",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of this self-care entry"
+    },
+    "activity": {
+      "type": "string",
+      "description": "What did you do for self-care?"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "movement",
+        "nature",
+        "creative",
+        "rest",
+        "social",
+        "spiritual",
+        "play",
+        "other"
+      ],
+      "description": "Type of self-care activity"
+    },
+    "category_other": {
+      "type": "string",
+      "description": "Custom category label when category is 'other'"
+    },
+    "minutes": {
+      "type": "number",
+      "description": "How many minutes spent"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional reflection on this activity"
+    }
+  },
+  "required": [
+    "date",
+    "activity",
+    "minutes"
+  ]
+}

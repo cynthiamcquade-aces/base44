@@ -1,0 +1,46 @@
+{
+  "name": "WeeklyCheckin",
+  "type": "object",
+  "properties": {
+    "week_number": {
+      "type": "number",
+      "description": "Which week of the program (1-26)"
+    },
+    "wins": {
+      "type": "string",
+      "description": "What went well this week"
+    },
+    "challenges": {
+      "type": "string",
+      "description": "What was challenging"
+    },
+    "bold_action_taken": {
+      "type": "string",
+      "description": "The boldest action you took this week"
+    },
+    "self_care_rating": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "How well you took care of yourself (1-5)"
+    },
+    "visibility_rating": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "How visible were you this week (1-5)"
+    },
+    "energy_level": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Your energy level (1-5)"
+    },
+    "intention_for_next_week": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "week_number"
+  ]
+}

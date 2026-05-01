@@ -1,0 +1,38 @@
+{
+  "name": "SpeechStory",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Story title"
+    },
+    "zip_code": {
+      "type": "string",
+      "description": "The niche/theme this story lives in, e.g. 'Cultural Diversity', 'Trauma & Resilience'"
+    },
+    "story": {
+      "type": "string",
+      "description": "The story content"
+    },
+    "key_message": {
+      "type": "string",
+      "description": "The core message or lesson"
+    },
+    "hook": {
+      "type": "string",
+      "description": "The opening hook for this story"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Topics this story works for"
+    }
+  },
+  "required": [
+    "title",
+    "zip_code",
+    "story"
+  ]
+}

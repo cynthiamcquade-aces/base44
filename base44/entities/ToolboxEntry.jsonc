@@ -1,0 +1,52 @@
+{
+  "name": "ToolboxEntry",
+  "type": "object",
+  "properties": {
+    "tool_id": {
+      "type": "string",
+      "description": "ID of the tool (built-in or custom)"
+    },
+    "tool_source": {
+      "type": "string",
+      "enum": [
+        "builtin",
+        "custom"
+      ],
+      "description": "Whether this is a built-in or custom tool"
+    },
+    "tool_title": {
+      "type": "string",
+      "description": "Snapshot of tool title"
+    },
+    "tool_emoji": {
+      "type": "string"
+    },
+    "star_rating": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "color_tag": {
+      "type": "string",
+      "description": "Color label for this tool entry"
+    },
+    "reflection": {
+      "type": "string",
+      "description": "Personal reflection or journal note"
+    },
+    "in_roadside_kit": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this tool is in the user's Roadside Toolkit"
+    },
+    "last_used_step": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "tool_id",
+    "tool_source",
+    "tool_title"
+  ]
+}

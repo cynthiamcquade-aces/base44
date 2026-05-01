@@ -1,0 +1,61 @@
+{
+  "name": "QuarterGoal",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The big goal title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the goal"
+    },
+    "quarter": {
+      "type": "number",
+      "enum": [
+        1,
+        2
+      ],
+      "description": "Which quarter (1 or 2)"
+    },
+    "why_it_matters": {
+      "type": "string",
+      "description": "Why this goal matters deeply to you"
+    },
+    "fear_to_overcome": {
+      "type": "string",
+      "description": "The fear or excuse holding you back"
+    },
+    "visibility_outcome": {
+      "type": "string",
+      "description": "How achieving this makes you more visible"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "not_started",
+        "in_progress",
+        "completed"
+      ],
+      "default": "not_started"
+    },
+    "progress_percent": {
+      "type": "number",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 100
+    }
+  },
+  "required": [
+    "title",
+    "quarter"
+  ]
+}
